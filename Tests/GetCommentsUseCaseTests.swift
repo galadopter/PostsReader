@@ -1,8 +1,8 @@
 //
-//  GetPostsUseCaseTests.swift
+//  GetCommentsUseCaseTests.swift
 //  PostsReaderTests
 //
-//  Created by Yan Schneider on 3.04.21.
+//  Created by Yan Schneider on 4.04.21.
 //
 
 import XCTest
@@ -12,39 +12,39 @@ import Nimble
 
 @testable import PostsReader
 
-class GetPostsUseCaseTests: XCTestCase {
+class GetCommentsUseCaseTests: XCTestCase {
     
     func testFetchingPosts() {
-        let posts = TestHelperFactory.posts()
-        let gateway = SuccessMockGetPostsGateway(posts: posts)
-        let useCase = GetPostsUseCase(gateway: gateway)
+        let comments = TestHelperFactory.comments()
+        let gateway = SuccessMockGetCommentsGateway(comments: comments)
+        let useCase = GetCommentsUseCase(postId: 0, gateway: gateway)
         let input = PublishSubject<Void>()
-        let recorder = GetPostsUseCaseRecorder(useCase: useCase, input: input.asObservable())
+        let recorder = GetCommentsUseCaseRecorder(useCase: useCase, input: input.asObservable())
         
         recorder.start()
         input.onNext(())
         
         recorder.eventsShouldEmitted(times: 3, recorder: \.isLoadingRecorder)
-        recorder.eventsShouldEmitted(times: 1, recorder: \.postsRecorder)
+        recorder.eventsShouldEmitted(times: 1, recorder: \.commentsRecorder)
         recorder.eventsShouldEmitted(times: 0, recorder: \.errorsRecorder)
         
-        recorder.eventElementShouldBe(posts, at: 0, for: \.postsRecorder)
+        recorder.eventElementShouldBe(comments, at: 0, for: \.commentsRecorder)
         recorder.eventElementShouldBe(false, at: 0, for: \.isLoadingRecorder)
         recorder.eventElementShouldBe(true, at: 1, for: \.isLoadingRecorder)
         recorder.eventElementShouldBe(false, at: 2, for: \.isLoadingRecorder)
     }
     
     func testFailingFetchingPosts() {
-        let gateway = FailureMockGetPostsGateway()
-        let useCase = GetPostsUseCase(gateway: gateway)
+        let gateway = FailureMockGetCommentsGateway()
+        let useCase = GetCommentsUseCase(postId: 0, gateway: gateway)
         let input = PublishSubject<Void>()
-        let recorder = GetPostsUseCaseRecorder(useCase: useCase, input: input.asObservable())
+        let recorder = GetCommentsUseCaseRecorder(useCase: useCase, input: input.asObservable())
         
         recorder.start()
         input.onNext(())
         
         recorder.eventsShouldEmitted(times: 3, recorder: \.isLoadingRecorder)
-        recorder.eventsShouldEmitted(times: 0, recorder: \.postsRecorder)
+        recorder.eventsShouldEmitted(times: 0, recorder: \.commentsRecorder)
         recorder.eventsShouldEmitted(times: 1, recorder: \.errorsRecorder)
         
         recorder.eventElementShouldBe(false, at: 0, for: \.isLoadingRecorder)
@@ -53,19 +53,19 @@ class GetPostsUseCaseTests: XCTestCase {
     }
 }
 
-private extension GetPostsUseCaseTests {
+private extension GetCommentsUseCaseTests {
     
-    struct SuccessMockGetPostsGateway: GetPostsGateway {
-        let posts: [Post]
+    struct SuccessMockGetCommentsGateway: GetCommentsGateway {
+        let comments: [Comment]
         
-        func getPosts() -> Single<Result<[Post], Error>> {
-            .just(.success(posts))
+        func getComments(postId: Int) -> Single<Result<[Comment], Error>> {
+            .just(.success(comments))
         }
     }
     
-    struct FailureMockGetPostsGateway: GetPostsGateway {
+    struct FailureMockGetCommentsGateway: GetCommentsGateway {
         
-        func getPosts() -> Single<Result<[Post], Error>> {
+        func getComments(postId: Int) -> Single<Result<[Comment], Error>> {
             .just(.failure(TestHelperFactory.error()))
         }
     }

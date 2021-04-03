@@ -10,7 +10,7 @@ import RxSwift
 import RxCocoa
 
 final class PostsViewModel {
-    let getPostsUseCase = GetPostsUseCase(gateway: PostsService())
+    private let getPostsUseCase = GetPostsUseCase(gateway: PostsService())
 }
 
 extension PostsViewModel: ViewModelType {
