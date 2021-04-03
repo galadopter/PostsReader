@@ -9,11 +9,11 @@ import Foundation
 import RxSwift
 
 protocol GetUserGateway {
-    func getUser(userId: String) -> Single<Result<User, Error>>
+    func getUser(userId: Int) -> Single<Result<User, Error>>
 }
 
 struct GetUserUseCase {
-    let userId: String
+    let userId: Int
     let gateway: GetUserGateway
 }
 

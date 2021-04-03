@@ -1,18 +1,18 @@
 //
-//  PostsAPI.swift
-//  PostsReader
+//  UsersAPI.swift
+//  PostsReaderTests
 //
-//  Created by Yan on 3/4/21.
+//  Created by Yan Schneider on 4.04.21.
 //
 
 import Foundation
 import Moya
 
-enum PostsAPI {
-    case getPosts
+enum UsersAPI {
+    case getUser(id: Int)
 }
 
-extension PostsAPI: TargetType {
+extension UsersAPI: TargetType {
     
     public var baseURL: URL {
         return Credentials.Server.url
@@ -20,14 +20,14 @@ extension PostsAPI: TargetType {
     
     public var path: String {
         switch self {
-        case .getPosts:
-            return "/posts"
+        case .getUser(let id):
+            return "/users/\(id)"
         }
     }
     
     public var method: Moya.Method {
         switch self {
-        case .getPosts:
+        case .getUser:
             return .get
         }
     }
@@ -38,7 +38,7 @@ extension PostsAPI: TargetType {
     
     public var task: Task {
         switch self {
-        case .getPosts:
+        case .getUser:
             return .requestPlain
         }
     }
@@ -47,3 +47,4 @@ extension PostsAPI: TargetType {
         return nil
     }
 }
+

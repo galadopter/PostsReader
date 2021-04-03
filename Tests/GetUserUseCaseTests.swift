@@ -17,7 +17,7 @@ class GetUserUseCaseTests: XCTestCase {
     func testFetchingUser() {
         let user = TestHelperFactory.user()
         let gateway = SuccessMockGetUserGateway(user: user)
-        let useCase = GetUserUseCase(userId: "", gateway: gateway)
+        let useCase = GetUserUseCase(userId: 0, gateway: gateway)
         let input = PublishSubject<Void>()
         let recorder = GetUserUseCaseRecorder(useCase: useCase, input: input.asObservable())
         
@@ -36,7 +36,7 @@ class GetUserUseCaseTests: XCTestCase {
     
     func testFailingFetchingUser() {
         let gateway = FailureMockGetUserGateway()
-        let useCase = GetUserUseCase(userId: "", gateway: gateway)
+        let useCase = GetUserUseCase(userId: 0, gateway: gateway)
         let input = PublishSubject<Void>()
         let recorder = GetUserUseCaseRecorder(useCase: useCase, input: input.asObservable())
         

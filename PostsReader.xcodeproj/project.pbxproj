@@ -9,6 +9,11 @@
 /* Begin PBXBuildFile section */
 		7B59A3732619104D0095FD36 /* GetUserUseCaseRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B59A3722619104D0095FD36 /* GetUserUseCaseRecorder.swift */; };
 		7B59A377261910A70095FD36 /* GetUserUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B59A376261910A70095FD36 /* GetUserUseCaseTests.swift */; };
+		7B59A383261914460095FD36 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B59A37B2619140C0095FD36 /* UsersAPI.swift */; };
+		7B59A38C261914840095FD36 /* UsersService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B59A388261914820095FD36 /* UsersService.swift */; };
+		7B59A3952619153B0095FD36 /* UsersMapping.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B59A391261914ED0095FD36 /* UsersMapping.swift */; };
+		7B59A39B261915F40095FD36 /* PostDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B59A39A261915F40095FD36 /* PostDetailsViewModel.swift */; };
+		7B59A39F261918500095FD36 /* Comment.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B59A39E261918500095FD36 /* Comment.swift */; };
 		7B8090242618D61A004F339E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8090232618D61A004F339E /* AppDelegate.swift */; };
 		7B8090262618D61A004F339E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8090252618D61A004F339E /* SceneDelegate.swift */; };
 		7B8090282618D61A004F339E /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8090272618D61A004F339E /* PostsViewController.swift */; };
@@ -66,6 +71,11 @@
 /* Begin PBXFileReference section */
 		7B59A3722619104D0095FD36 /* GetUserUseCaseRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserUseCaseRecorder.swift; sourceTree = "<group>"; };
 		7B59A376261910A70095FD36 /* GetUserUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserUseCaseTests.swift; sourceTree = "<group>"; };
+		7B59A37B2619140C0095FD36 /* UsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
+		7B59A388261914820095FD36 /* UsersService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersService.swift; sourceTree = "<group>"; };
+		7B59A391261914ED0095FD36 /* UsersMapping.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersMapping.swift; sourceTree = "<group>"; };
+		7B59A39A261915F40095FD36 /* PostDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewModel.swift; sourceTree = "<group>"; };
+		7B59A39E261918500095FD36 /* Comment.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Comment.swift; sourceTree = "<group>"; };
 		7B8090202618D61A004F339E /* PostsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8090232618D61A004F339E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B8090252618D61A004F339E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -132,6 +142,16 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7B59A37A261913F60095FD36 /* Users */ = {
+			isa = PBXGroup;
+			children = (
+				7B59A37B2619140C0095FD36 /* UsersAPI.swift */,
+				7B59A388261914820095FD36 /* UsersService.swift */,
+				7B59A391261914ED0095FD36 /* UsersMapping.swift */,
+			);
+			path = Users;
+			sourceTree = "<group>";
+		};
 		7B8090172618D61A004F339E = {
 			isa = PBXGroup;
 			children = (
@@ -245,6 +265,7 @@
 		7B80907F2618D994004F339E /* Moya */ = {
 			isa = PBXGroup;
 			children = (
+				7B59A37A261913F60095FD36 /* Users */,
 				7B8092442618F967004F339E /* Posts */,
 				7B8090982618D994004F339E /* Base */,
 			);
@@ -295,6 +316,7 @@
 			children = (
 				7B8091BB2618DFD2004F339E /* Post.swift */,
 				7BFA14DD26190C5B009BB6D9 /* User.swift */,
+				7B59A39E261918500095FD36 /* Comment.swift */,
 			);
 			path = Entities;
 			sourceTree = "<group>";
@@ -339,6 +361,7 @@
 			isa = PBXGroup;
 			children = (
 				7B85800D261907DB00B89458 /* PostDetailsViewController.swift */,
+				7B59A39A261915F40095FD36 /* PostDetailsViewModel.swift */,
 			);
 			path = PostDetails;
 			sourceTree = "<group>";
@@ -485,6 +508,10 @@
 			files = (
 				7B8091102618D995004F339E /* Network.swift in Sources */,
 				7B8091702618D9E3004F339E /* NetworkInterceptor.swift in Sources */,
+				7B59A38C261914840095FD36 /* UsersService.swift in Sources */,
+				7B59A383261914460095FD36 /* UsersAPI.swift in Sources */,
+				7B59A3952619153B0095FD36 /* UsersMapping.swift in Sources */,
+				7B59A39B261915F40095FD36 /* PostDetailsViewModel.swift in Sources */,
 				7B8091112618D995004F339E /* NetworkService.swift in Sources */,
 				7B8091BC2618DFD2004F339E /* Post.swift in Sources */,
 				7B8092602618FB3F004F339E /* PostsViewModel.swift in Sources */,
@@ -503,6 +530,7 @@
 				7B8090262618D61A004F339E /* SceneDelegate.swift in Sources */,
 				7BAF65522618FF75006CC76D /* UIViewController+ErrorAlert.swift in Sources */,
 				7BFA14DA26190C1E009BB6D9 /* GetUserUseCase.swift in Sources */,
+				7B59A39F261918500095FD36 /* Comment.swift in Sources */,
 				7BFA14DE26190C5B009BB6D9 /* User.swift in Sources */,
 				7B80925A2618FA73004F339E /* PostsAPI.swift in Sources */,
 				7B857FF62619007F00B89458 /* PostCell.swift in Sources */,
