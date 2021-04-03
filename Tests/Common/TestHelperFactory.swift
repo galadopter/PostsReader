@@ -90,6 +90,28 @@ struct TestHelperFactory {
         )
     }
     
+    static func comments(
+        count: Int = 2
+    ) -> [Comment] {
+        (1...count).map { comment(id: $0) }
+    }
+    
+    static func comment(
+        id: Int = 0,
+        postId: Int = 0,
+        name: String = "",
+        email: String = "",
+        body: String = ""
+    ) -> Comment {
+        .init(
+            id: id,
+            postId: postId,
+            name: name,
+            email: email,
+            body: body
+        )
+    }
+    
     static func error(
         message: String = ""
     ) -> Error {
