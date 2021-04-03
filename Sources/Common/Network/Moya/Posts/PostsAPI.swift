@@ -10,6 +10,7 @@ import Moya
 
 enum PostsAPI {
     case getPosts
+    case getComments(postId: Int)
 }
 
 extension PostsAPI: TargetType {
@@ -22,12 +23,14 @@ extension PostsAPI: TargetType {
         switch self {
         case .getPosts:
             return "/posts"
+        case .getComments(let postId):
+            return "/posts/\(postId)/comments"
         }
     }
     
     public var method: Moya.Method {
         switch self {
-        case .getPosts:
+        case .getPosts, .getComments:
             return .get
         }
     }
@@ -38,7 +41,7 @@ extension PostsAPI: TargetType {
     
     public var task: Task {
         switch self {
-        case .getPosts:
+        case .getPosts, .getComments:
             return .requestPlain
         }
     }

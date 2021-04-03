@@ -44,6 +44,7 @@ private extension PostDetailsViewController {
         navigationItem.title = "Post Detail"
         titleLabel.text = post.title
         bodyLabel.text = post.body
+        commentsTableView.register(CommentCell.nib, forCellReuseIdentifier: CommentCell.reuseIdentifier)
     }
     
     func bind() {
@@ -54,7 +55,12 @@ private extension PostDetailsViewController {
             output.errors.emit(to: rx.error),
             
             output.user.map { "Created by: \($0.name)" }
-                .drive(authorLabel.rx.text)
+                .drive(authorLabel.rx.text),
+            
+            output.comments
+                .drive(commentsTableView.rx.items(cellIdentifier: CommentCell.reuseIdentifier, cellType: CommentCell.self)) { _, comment, cell in
+                    cell.configure(title: comment.name, authorName: comment.email, body: comment.body)
+                }
         ])
     }
 }

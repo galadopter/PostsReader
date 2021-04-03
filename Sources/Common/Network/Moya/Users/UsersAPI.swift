@@ -47,4 +47,3 @@ extension UsersAPI: TargetType {
         return nil
     }
 }
-
