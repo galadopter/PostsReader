@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B59A3732619104D0095FD36 /* GetUserUseCaseRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B59A3722619104D0095FD36 /* GetUserUseCaseRecorder.swift */; };
+		7B59A377261910A70095FD36 /* GetUserUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B59A376261910A70095FD36 /* GetUserUseCaseTests.swift */; };
 		7B8090242618D61A004F339E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8090232618D61A004F339E /* AppDelegate.swift */; };
 		7B8090262618D61A004F339E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8090252618D61A004F339E /* SceneDelegate.swift */; };
 		7B8090282618D61A004F339E /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8090272618D61A004F339E /* PostsViewController.swift */; };
@@ -34,7 +36,7 @@
 		7B8092302618ECD2004F339E /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = 7B80922F2618ECD2004F339E /* RxBlocking */; };
 		7B8092352618EFC9004F339E /* Recorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8092342618EFC9004F339E /* Recorder.swift */; };
 		7B80923B2618F044004F339E /* GetPostsUseCaseRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B80923A2618F044004F339E /* GetPostsUseCaseRecorder.swift */; };
-		7B80923F2618F564004F339E /* ModelsFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B80923E2618F564004F339E /* ModelsFactory.swift */; };
+		7B80923F2618F564004F339E /* TestHelperFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B80923E2618F564004F339E /* TestHelperFactory.swift */; };
 		7B8092552618FA70004F339E /* PostsService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8092462618F986004F339E /* PostsService.swift */; };
 		7B80925A2618FA73004F339E /* PostsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8092452618F986004F339E /* PostsAPI.swift */; };
 		7B8092602618FB3F004F339E /* PostsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B80925F2618FB3F004F339E /* PostsViewModel.swift */; };
@@ -47,6 +49,8 @@
 		7BAF654C2618FF6B006CC76D /* PKHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 7BAF654B2618FF6B006CC76D /* PKHUD */; };
 		7BAF65512618FF75006CC76D /* UIViewController+HUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAF654F2618FF75006CC76D /* UIViewController+HUD.swift */; };
 		7BAF65522618FF75006CC76D /* UIViewController+ErrorAlert.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BAF65502618FF75006CC76D /* UIViewController+ErrorAlert.swift */; };
+		7BFA14DA26190C1E009BB6D9 /* GetUserUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA14D926190C1E009BB6D9 /* GetUserUseCase.swift */; };
+		7BFA14DE26190C5B009BB6D9 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7BFA14DD26190C5B009BB6D9 /* User.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +64,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B59A3722619104D0095FD36 /* GetUserUseCaseRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserUseCaseRecorder.swift; sourceTree = "<group>"; };
+		7B59A376261910A70095FD36 /* GetUserUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserUseCaseTests.swift; sourceTree = "<group>"; };
 		7B8090202618D61A004F339E /* PostsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8090232618D61A004F339E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B8090252618D61A004F339E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -83,7 +89,7 @@
 		7B8091CE2618E579004F339E /* GetPostsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostsUseCaseTests.swift; sourceTree = "<group>"; };
 		7B8092342618EFC9004F339E /* Recorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Recorder.swift; sourceTree = "<group>"; };
 		7B80923A2618F044004F339E /* GetPostsUseCaseRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetPostsUseCaseRecorder.swift; sourceTree = "<group>"; };
-		7B80923E2618F564004F339E /* ModelsFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModelsFactory.swift; sourceTree = "<group>"; };
+		7B80923E2618F564004F339E /* TestHelperFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestHelperFactory.swift; sourceTree = "<group>"; };
 		7B8092452618F986004F339E /* PostsAPI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsAPI.swift; sourceTree = "<group>"; };
 		7B8092462618F986004F339E /* PostsService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PostsService.swift; sourceTree = "<group>"; };
 		7B80924D2618F9C8004F339E /* Credentials.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
@@ -95,6 +101,8 @@
 		7B85800D261907DB00B89458 /* PostDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostDetailsViewController.swift; sourceTree = "<group>"; };
 		7BAF654F2618FF75006CC76D /* UIViewController+HUD.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+HUD.swift"; sourceTree = "<group>"; };
 		7BAF65502618FF75006CC76D /* UIViewController+ErrorAlert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "UIViewController+ErrorAlert.swift"; sourceTree = "<group>"; };
+		7BFA14D926190C1E009BB6D9 /* GetUserUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserUseCase.swift; sourceTree = "<group>"; };
+		7BFA14DD26190C5B009BB6D9 /* User.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,7 +155,7 @@
 			children = (
 				7B8090592618D6CA004F339E /* Application */,
 				7B80907D2618D971004F339E /* Common */,
-				7B8091B92618DFAF004F339E /* Models */,
+				7B8091B92618DFAF004F339E /* Entities */,
 				7B80905D2618D72B004F339E /* Modules */,
 				7B80905A2618D6F3004F339E /* Resources */,
 				7B8091BA2618DFB5004F339E /* UseCases */,
@@ -162,6 +170,8 @@
 				7B8092332618EDC5004F339E /* Common */,
 				7B8091CE2618E579004F339E /* GetPostsUseCaseTests.swift */,
 				7B80923A2618F044004F339E /* GetPostsUseCaseRecorder.swift */,
+				7B59A3722619104D0095FD36 /* GetUserUseCaseRecorder.swift */,
+				7B59A376261910A70095FD36 /* GetUserUseCaseTests.swift */,
 			);
 			path = Tests;
 			sourceTree = "<group>";
@@ -280,18 +290,20 @@
 			path = Posts;
 			sourceTree = "<group>";
 		};
-		7B8091B92618DFAF004F339E /* Models */ = {
+		7B8091B92618DFAF004F339E /* Entities */ = {
 			isa = PBXGroup;
 			children = (
 				7B8091BB2618DFD2004F339E /* Post.swift */,
+				7BFA14DD26190C5B009BB6D9 /* User.swift */,
 			);
-			path = Models;
+			path = Entities;
 			sourceTree = "<group>";
 		};
 		7B8091BA2618DFB5004F339E /* UseCases */ = {
 			isa = PBXGroup;
 			children = (
 				7B8091C02618E027004F339E /* GetPostsUseCase.swift */,
+				7BFA14D926190C1E009BB6D9 /* GetUserUseCase.swift */,
 			);
 			path = UseCases;
 			sourceTree = "<group>";
@@ -300,7 +312,7 @@
 			isa = PBXGroup;
 			children = (
 				7B8092342618EFC9004F339E /* Recorder.swift */,
-				7B80923E2618F564004F339E /* ModelsFactory.swift */,
+				7B80923E2618F564004F339E /* TestHelperFactory.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -490,6 +502,8 @@
 				7B8090242618D61A004F339E /* AppDelegate.swift in Sources */,
 				7B8090262618D61A004F339E /* SceneDelegate.swift in Sources */,
 				7BAF65522618FF75006CC76D /* UIViewController+ErrorAlert.swift in Sources */,
+				7BFA14DA26190C1E009BB6D9 /* GetUserUseCase.swift in Sources */,
+				7BFA14DE26190C5B009BB6D9 /* User.swift in Sources */,
 				7B80925A2618FA73004F339E /* PostsAPI.swift in Sources */,
 				7B857FF62619007F00B89458 /* PostCell.swift in Sources */,
 				7B85800E261907DB00B89458 /* PostDetailsViewController.swift in Sources */,
@@ -500,10 +514,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7B80923F2618F564004F339E /* ModelsFactory.swift in Sources */,
+				7B80923F2618F564004F339E /* TestHelperFactory.swift in Sources */,
 				7B8091CF2618E579004F339E /* GetPostsUseCaseTests.swift in Sources */,
+				7B59A3732619104D0095FD36 /* GetUserUseCaseRecorder.swift in Sources */,
 				7B8092352618EFC9004F339E /* Recorder.swift in Sources */,
 				7B80923B2618F044004F339E /* GetPostsUseCaseRecorder.swift in Sources */,
+				7B59A377261910A70095FD36 /* GetUserUseCaseTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
