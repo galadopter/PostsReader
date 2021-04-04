@@ -13,7 +13,7 @@ class PostDetailsViewController: UIViewController {
     @IBOutlet private weak var titleLabel: UILabel!
     @IBOutlet private weak var authorLabel: UILabel!
     @IBOutlet private weak var bodyLabel: UILabel!
-    @IBOutlet private weak var commentsTableView: UITableView!
+    @IBOutlet private weak var stackView: UIStackView!
     
     private let viewModel: PostsDetailsViewModel
     private let post: Post
@@ -44,7 +44,6 @@ private extension PostDetailsViewController {
         navigationItem.title = "Post Detail"
         titleLabel.text = post.title
         bodyLabel.text = post.body
-        commentsTableView.register(CommentCell.nib, forCellReuseIdentifier: CommentCell.reuseIdentifier)
     }
     
     func bind() {
@@ -57,10 +56,14 @@ private extension PostDetailsViewController {
             output.user.map { "Created by: \($0.name)" }
                 .drive(authorLabel.rx.text),
             
-            output.comments
-                .drive(commentsTableView.rx.items(cellIdentifier: CommentCell.reuseIdentifier, cellType: CommentCell.self)) { _, comment, cell in
-                    cell.configure(title: comment.name, authorName: comment.email, body: comment.body)
+            output.comments.drive(onNext: { [weak self] comments in
+                for comment in comments {
+                    let view = CommentView()
+                    view.configure(title: comment.name, authorName: comment.email, body: comment.body)
+                    self?.stackView.addArrangedSubview(view)
+                    self?.stackView.setNeedsLayout()
                 }
+            })
         ])
     }
 }

@@ -18,8 +18,7 @@
 		7B59A3AE261919290095FD36 /* GetCommentsUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B59A3AD261919290095FD36 /* GetCommentsUseCase.swift */; };
 		7B59A3B226191A0B0095FD36 /* GetCommentsUseCaseRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B59A3B126191A0B0095FD36 /* GetCommentsUseCaseRecorder.swift */; };
 		7B59A3B626191A4F0095FD36 /* GetCommentsUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B59A3B526191A4F0095FD36 /* GetCommentsUseCaseTests.swift */; };
-		7B59A3C226191EF70095FD36 /* CommentCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B59A3C026191EF70095FD36 /* CommentCell.swift */; };
-		7B59A3C326191EF70095FD36 /* CommentCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7B59A3C126191EF70095FD36 /* CommentCell.xib */; };
+		7B59A3C226191EF70095FD36 /* CommentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B59A3C026191EF70095FD36 /* CommentView.swift */; };
 		7B8090242618D61A004F339E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8090232618D61A004F339E /* AppDelegate.swift */; };
 		7B8090262618D61A004F339E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8090252618D61A004F339E /* SceneDelegate.swift */; };
 		7B8090282618D61A004F339E /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8090272618D61A004F339E /* PostsViewController.swift */; };
@@ -85,8 +84,7 @@
 		7B59A3AD261919290095FD36 /* GetCommentsUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommentsUseCase.swift; sourceTree = "<group>"; };
 		7B59A3B126191A0B0095FD36 /* GetCommentsUseCaseRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommentsUseCaseRecorder.swift; sourceTree = "<group>"; };
 		7B59A3B526191A4F0095FD36 /* GetCommentsUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCommentsUseCaseTests.swift; sourceTree = "<group>"; };
-		7B59A3C026191EF70095FD36 /* CommentCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentCell.swift; sourceTree = "<group>"; };
-		7B59A3C126191EF70095FD36 /* CommentCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CommentCell.xib; sourceTree = "<group>"; };
+		7B59A3C026191EF70095FD36 /* CommentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommentView.swift; sourceTree = "<group>"; };
 		7B8090202618D61A004F339E /* PostsReader.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PostsReader.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7B8090232618D61A004F339E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		7B8090252618D61A004F339E /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -162,13 +160,12 @@
 			path = Users;
 			sourceTree = "<group>";
 		};
-		7B59A3BF26191EA10095FD36 /* CommentCell */ = {
+		7B59A3BF26191EA10095FD36 /* CommentView */ = {
 			isa = PBXGroup;
 			children = (
-				7B59A3C026191EF70095FD36 /* CommentCell.swift */,
-				7B59A3C126191EF70095FD36 /* CommentCell.xib */,
+				7B59A3C026191EF70095FD36 /* CommentView.swift */,
 			);
-			path = CommentCell;
+			path = CommentView;
 			sourceTree = "<group>";
 		};
 		7B8090172618D61A004F339E = {
@@ -382,7 +379,7 @@
 		7B85800C261907A800B89458 /* PostDetails */ = {
 			isa = PBXGroup;
 			children = (
-				7B59A3BF26191EA10095FD36 /* CommentCell */,
+				7B59A3BF26191EA10095FD36 /* CommentView */,
 				7B85800D261907DB00B89458 /* PostDetailsViewController.swift */,
 				7B59A39A261915F40095FD36 /* PostDetailsViewModel.swift */,
 			);
@@ -510,7 +507,6 @@
 				7B8090302618D61B004F339E /* LaunchScreen.storyboard in Resources */,
 				7B8580092619072D00B89458 /* PostDetails.storyboard in Resources */,
 				7B80902D2618D61B004F339E /* Assets.xcassets in Resources */,
-				7B59A3C326191EF70095FD36 /* CommentCell.xib in Resources */,
 				7B80902B2618D61A004F339E /* Posts.storyboard in Resources */,
 				7B857FF72619007F00B89458 /* PostCell.xib in Resources */,
 			);
@@ -557,7 +553,7 @@
 				7BFA14DA26190C1E009BB6D9 /* GetUserUseCase.swift in Sources */,
 				7B59A39F261918500095FD36 /* Comment.swift in Sources */,
 				7BFA14DE26190C5B009BB6D9 /* User.swift in Sources */,
-				7B59A3C226191EF70095FD36 /* CommentCell.swift in Sources */,
+				7B59A3C226191EF70095FD36 /* CommentView.swift in Sources */,
 				7B80925A2618FA73004F339E /* PostsAPI.swift in Sources */,
 				7B857FF62619007F00B89458 /* PostCell.swift in Sources */,
 				7B85800E261907DB00B89458 /* PostDetailsViewController.swift in Sources */,
