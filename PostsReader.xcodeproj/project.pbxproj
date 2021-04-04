@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7B36DCB22619D20D00D7F21C /* NetworkInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B36DCB12619D20D00D7F21C /* NetworkInterceptor.swift */; };
 		7B59A3732619104D0095FD36 /* GetUserUseCaseRecorder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B59A3722619104D0095FD36 /* GetUserUseCaseRecorder.swift */; };
 		7B59A377261910A70095FD36 /* GetUserUseCaseTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B59A376261910A70095FD36 /* GetUserUseCaseTests.swift */; };
 		7B59A383261914460095FD36 /* UsersAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B59A37B2619140C0095FD36 /* UsersAPI.swift */; };
@@ -29,7 +30,6 @@
 		7B8091102618D995004F339E /* Network.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B80909E2618D994004F339E /* Network.swift */; };
 		7B8091112618D995004F339E /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B80909F2618D994004F339E /* NetworkService.swift */; };
 		7B8091222618D995004F339E /* NetworkErrors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8090B32618D995004F339E /* NetworkErrors.swift */; };
-		7B8091702618D9E3004F339E /* NetworkInterceptor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B80916F2618D9E3004F339E /* NetworkInterceptor.swift */; };
 		7B8091952618DB1C004F339E /* UseCaseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B80918C2618DB1C004F339E /* UseCaseType.swift */; };
 		7B8091972618DB1C004F339E /* AppError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B80918E2618DB1C004F339E /* AppError.swift */; };
 		7B80919C2618DB1C004F339E /* ViewModelType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B8091942618DB1C004F339E /* ViewModelType.swift */; };
@@ -74,6 +74,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		7B36DCB12619D20D00D7F21C /* NetworkInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkInterceptor.swift; sourceTree = "<group>"; };
 		7B59A3722619104D0095FD36 /* GetUserUseCaseRecorder.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserUseCaseRecorder.swift; sourceTree = "<group>"; };
 		7B59A376261910A70095FD36 /* GetUserUseCaseTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetUserUseCaseTests.swift; sourceTree = "<group>"; };
 		7B59A37B2619140C0095FD36 /* UsersAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UsersAPI.swift; sourceTree = "<group>"; };
@@ -100,7 +101,6 @@
 		7B80909E2618D994004F339E /* Network.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Network.swift; sourceTree = "<group>"; };
 		7B80909F2618D994004F339E /* NetworkService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		7B8090B32618D995004F339E /* NetworkErrors.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkErrors.swift; sourceTree = "<group>"; };
-		7B80916F2618D9E3004F339E /* NetworkInterceptor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NetworkInterceptor.swift; sourceTree = "<group>"; };
 		7B80918C2618DB1C004F339E /* UseCaseType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UseCaseType.swift; sourceTree = "<group>"; };
 		7B80918E2618DB1C004F339E /* AppError.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppError.swift; sourceTree = "<group>"; };
 		7B8091942618DB1C004F339E /* ViewModelType.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewModelType.swift; sourceTree = "<group>"; };
@@ -297,8 +297,8 @@
 			isa = PBXGroup;
 			children = (
 				7B8090992618D994004F339E /* NetworkUtils.swift */,
+				7B36DCB12619D20D00D7F21C /* NetworkInterceptor.swift */,
 				7B80909E2618D994004F339E /* Network.swift */,
-				7B80916F2618D9E3004F339E /* NetworkInterceptor.swift */,
 				7B80909F2618D994004F339E /* NetworkService.swift */,
 			);
 			path = Base;
@@ -531,7 +531,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				7B8091102618D995004F339E /* Network.swift in Sources */,
-				7B8091702618D9E3004F339E /* NetworkInterceptor.swift in Sources */,
 				7B59A38C261914840095FD36 /* UsersService.swift in Sources */,
 				7B59A383261914460095FD36 /* UsersAPI.swift in Sources */,
 				7B59A3952619153B0095FD36 /* UsersMapping.swift in Sources */,
@@ -541,6 +540,7 @@
 				7B8092602618FB3F004F339E /* PostsViewModel.swift in Sources */,
 				7B8091C12618E027004F339E /* GetPostsUseCase.swift in Sources */,
 				7BAF65512618FF75006CC76D /* UIViewController+HUD.swift in Sources */,
+				7B36DCB22619D20D00D7F21C /* NetworkInterceptor.swift in Sources */,
 				7B8091222618D995004F339E /* NetworkErrors.swift in Sources */,
 				7B8091952618DB1C004F339E /* UseCaseType.swift in Sources */,
 				7B80919C2618DB1C004F339E /* ViewModelType.swift in Sources */,

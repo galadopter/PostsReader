@@ -1,8 +1,8 @@
 //
 //  NetworkInterceptor.swift
-//  PostsReader
+//  Taris
 //
-//  Created by Yan on 3/4/21.
+//  Created by Yan on 16.01.21.
 //
 
 import Moya
@@ -17,9 +17,7 @@ struct StandardNetworkInterceptor: NetworkInterceptor {
     
     func intercept(response: Response) -> Result<Response, Error> {
         switch response.statusCode {
-        case 200...203: return .success(response)
-        case 204: return .failure(NetworkErrors.NoContentError())
-        case 205...399: return .success(response)
+        case 200...399: return .success(response)
         case 404: return .failure(notFoundError(from: response))
         default: return .failure(NetworkErrors.GenericError(response: response))
         }

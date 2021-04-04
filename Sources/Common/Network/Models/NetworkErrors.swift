@@ -33,8 +33,4 @@ enum NetworkErrors {
             self.init(message: message)
         }
     }
-    
-    struct NoContentError: Error {
-        
-    }
 }

@@ -36,7 +36,7 @@ extension GetPostsUseCase: UseCaseType {
             return error
         }
         
-        return .init(posts: posts, errors: errors, isLoading: isLoadingSubject.asObservable().debug())
+        return .init(posts: posts, errors: errors, isLoading: isLoadingSubject.asObservable())
     }
     
     private func posts(from input: Input, isLoadingSubject: BehaviorSubject<Bool>) -> Observable<Result<[Post], Error>> {

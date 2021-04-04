@@ -13,10 +13,3 @@ extension Response {
         return (try? mapJSON()) as? [String: Any]
     }
 }
-
-extension MoyaProvider {
-    
-//    static func authorized(manager: SessionManager) -> MoyaProvider {
-//        return MoyaProvider(
-//    }
-}
